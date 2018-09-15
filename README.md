@@ -38,6 +38,6 @@ O trabalho deve ser entregue até as **23:59 do dia 06/10 (sábado)**. A entrega
 ## Grupo
 O trabalho pode ser feito em grupos de até 3 pessoas. Preencha abaixo o nome dos integrantes do grupo:
 
-1) Integrante A - matrícula
-2) Integrante B - matrícula
-3) Integrante C - matrícula
+1) Antonio Bazzarella - 1-1711737
+2) Felipe Cupertino   - 1-1711745
+3) Thell Miranda      - 1-1714866
