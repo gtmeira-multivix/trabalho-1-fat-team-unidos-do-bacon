@@ -18,13 +18,14 @@ Pilha* pilha_criar(int tamanho){
 	return p;
 }
 	
-void pilha_push(Pilha *p, Token t){
+void pilha_push(Pilha *p, Token t)
+{
 
 	if(p->topo >= p->tamanho) {
 		printf("Pilha cheia!\n");
 		return;
 	}
-	p->dados[p->topo] = info;
+	p->dados[p->topo] = t;
 	p->topo++;
 }
 
