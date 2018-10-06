@@ -2,11 +2,21 @@
 #include <stdlib.h>
 #include "pilha.h"
 
+typedef struct no {
+	Token token;
+	struct no *prox;
+	int num;
+} No;
+
 typedef struct pilha{
 	Token *dados;
 	int tamanho;
 	int topo;
+	No *primeiro;
+	No *prox;
 } Pilha;
+
+
 
 Pilha* pilha_criar(int tamanho){
 	Pilha *p = (Pilha*) malloc(sizeof(Pilha));
@@ -40,11 +50,11 @@ Token pilha_pop(Pilha *p){
 
 Token pilha_primeiro(Pilha *p){
 	
-	return p->dados[p->Token]
+	return p->primeiro->token;
 }
 int pilha_vazia(Pilha *p){
 	
-	if(Pilha->prox == NULL)
+	if(p->prox == NULL)
 		return 1;
 	else
 		return 0;	
@@ -57,13 +67,14 @@ void pilha_destruir(Pilha *p){
 }
 void pilha_imprimir(Pilha *p)
 {
-	if(vazia(p))
+	int tam;
+	if(pilha_vazia(p))
 	{
 		printf("PILHA vazia!\n\n");
 	return ;
 	}
 
-	node *tmp;
+	No *tmp;
 	tmp = p->prox;
 	printf("PILHA:");
 	while( tmp != NULL)
