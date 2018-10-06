@@ -25,7 +25,6 @@ No *n = (No*) malloc(sizeof(No));
 	if(f->fim == NULL) {
 		f->inicio = n;
 		f->fim = n;
-		return 0;
 	}
 	f->fim->prox = n;
 	f->fim = n;
@@ -54,7 +53,7 @@ int fila_vazia(Fila *f) {
 	}
 
 void fila_destruir(Fila *f) {
-	if(!vazia(f)){
+	if(fila_vazia(f)){
 		No *proxNode,
 			  *atual;
 
@@ -68,7 +67,7 @@ void fila_destruir(Fila *f) {
 }
 
 void fila_imprimir(Fila *f) {
-	if(vazia(f)){
+	if(fila_vazia(f)){
 		printf("Fila vazia!\n\n");
 		return ;
 	}
